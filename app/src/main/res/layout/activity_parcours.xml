@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundProfil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParcoursActivity">
+    <Toolbar
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor"
+
+        >
+        <ImageView
+            android:layout_width="@dimen/iconeHeight_Width"
+            android:layout_margin="5dp"
+            android:layout_height="50dp"
+            android:onClick="goUserProfile"
+            android:src="@drawable/toolback"
+
+            />
+    </Toolbar>
+
+
+
+    <ListView
+        android:id="@+id/listParcours"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomToolbar"
+        android:layout_below="@id/topToolbar"/>
+    <Toolbar
+        android:id="@+id/bottomToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ToolBarHeight">
+            <ImageView
+                android:id="@+id/map"
+                android:layout_margin="@dimen/margin5"
+                android:layout_width="@dimen/iconeHeight_Width"
+                android:layout_height="@dimen/iconeHeight_Width"
+                android:src="@drawable/map"
+                />
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_margin="@dimen/margin5"
+                android:layout_width="@dimen/iconeHeight_Width"
+                android:layout_height="@dimen/iconeHeight_Width"
+                android:src="@drawable/avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/search"
+                android:layout_margin="@dimen/margin5"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="@dimen/iconeHeight_Width"
+                android:layout_height="@dimen/iconeHeight_Width"
+                android:src="@drawable/search"
+                />
+        </RelativeLayout>
+
+    </Toolbar>
+</RelativeLayout>

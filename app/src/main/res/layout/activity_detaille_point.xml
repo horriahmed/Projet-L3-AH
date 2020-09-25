@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundProfil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetaillePoint">
+    <Toolbar
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BarColor"
+        >
+        <ImageView
+            android:layout_width="@dimen/iconeHeight_Width"
+            android:layout_height="@dimen/iconeHeight_Width"
+            android:layout_margin="@dimen/margin5"
+            android:src="@drawable/toolback"
+            />
+        <ImageView
+            android:layout_width="@dimen/iconeHeight_Width"
+            android:layout_height="@dimen/iconeHeight_Width"
+            android:src="@drawable/modification"
+            android:id="@+id/modification"
+            android:onClick="modifierInfo"
+            android:layout_marginStart="120dp"/>
+    </Toolbar>
+
+
+    <EditText
+        android:id="@+id/titrePoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detaillePoint"
+        android:layout_below="@id/topToolbar"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/text_size"
+        android:layout_centerHorizontal="true"/>
+
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="votre description"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/DescriptioTextSize"
+        android:layout_margin="@dimen/margin5"
+        android:layout_below="@id/titrePoint"
+        />
+
+
+
+    <GridView
+        android:id="@+id/my_grid_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/description"
+        android:layout_above="@id/addImage"
+        android:numColumns="auto_fit"
+        android:columnWidth="100dp"
+        android:stretchMode="columnWidth"
+        android:layout_margin="@dimen/margin5"
+        android:verticalSpacing="@dimen/gridSpacing"
+        android:horizontalSpacing="@dimen/gridSpacing"
+
+        />
+
+    <ImageView
+        android:layout_width="@dimen/iconeHeight_Width"
+        android:layout_height="@dimen/iconeHeight_Width"
+        android:id="@+id/addImage"
+        android:src="@drawable/add"
+        android:onClick="afficherGallerie"
+        android:layout_above="@+id/bottomToolbar"
+        />
+    <Toolbar
+        android:id="@+id/bottomToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ToolBarHeight">
+            <ImageView
+                android:id="@+id/map"
+                android:layout_margin="@dimen/margin5"
+                android:layout_width="@dimen/iconeHeight_Width"
+                android:layout_height="@dimen/iconeHeight_Width"
+                android:src="@drawable/map"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_margin="@dimen/margin5"
+                android:layout_width="@dimen/iconeHeight_Width"
+                android:layout_height="@dimen/iconeHeight_Width"
+                android:src="@drawable/avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/search"
+                android:layout_margin="@dimen/margin5"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+
+                android:layout_width="@dimen/iconeHeight_Width"
+                android:layout_height="@dimen/iconeHeight_Width"
+                android:src="@drawable/search"
+                />
+        </RelativeLayout>
+
+    </Toolbar>
+</RelativeLayout>

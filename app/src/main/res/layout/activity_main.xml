@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+    android:id="@+id/mapView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    mapbox:mapbox_cameraTargetLat="48.8534"
+    mapbox:mapbox_cameraTargetLng=" 2.3488"
+    mapbox:mapbox_cameraZoom="12" >
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <Toolbar
+        android:id="@+id/topToolbar"
+        style="@style/BarColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/menu" />
+    </Toolbar>
+
+<ImageView
+    android:id="@+id/layers"
+    android:onClick="layersClick"
+    android:layout_margin="10dp"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_below="@id/topToolbar"
+    android:layout_alignParentRight="true"
+    android:src="@drawable/layers" />
+<ImageView
+    android:id="@+id/localization"
+    android:layout_margin="10dp"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_above="@id/bottomToolbar"
+    android:layout_alignParentRight="true"
+    android:src="@drawable/localization"/>
+    <Toolbar
+        android:id="@+id/bottomToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/map"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="goToMain"
+                android:src="@drawable/map"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/profile"
+                android:onClick="goToProfile"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/search"
+                android:layout_margin="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:onClick="goToSearch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/search"
+                />
+        </RelativeLayout>
+
+    </Toolbar>
+</RelativeLayout>

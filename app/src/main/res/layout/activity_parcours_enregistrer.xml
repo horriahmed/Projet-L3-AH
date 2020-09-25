@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParcoursEnregisterActivity">
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mapView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="126dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/mapboxBlue"
+        android:text="Start" />
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="48.8534"
+        mapbox:mapbox_cameraTargetLng=" 2.3488"
+        mapbox:mapbox_cameraZoom="12" >
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+
+    <ImageView
+        android:id="@+id/layers"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/topToolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="319dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="622dp"
+        android:onClick="layersClick"
+        android:src="@drawable/layers" />
+
+    <ImageView
+        android:id="@+id/localization"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="317dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="121dp"
+        android:src="@drawable/localization" />
+
+</RelativeLayout>

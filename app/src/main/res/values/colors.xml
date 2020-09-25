@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="principale">#B3078B75</color>
+    <color name="dark">#000</color>
+    <color name="mapboxWhite">#ffffff</color>
+    <color name="mapboxBlue">#4264fb</color>
+    <color name="mapboxGrayLight">#c6d2e1</color>
+    <color name="mapboxPink">#ee4e8b</color>
+    <color name="mapboxYellow">#d9d838</color>
+    <color name="mapboxRed">#b43b71</color>
+    <color name="backgroundProfil">#3EDACB</color>
+    <color name="textWhite">#ffffff</color>
+    <color name="afterCenterToolBar">#ACA9A9</color>
+    <color name="backGroundButton">#D2C4C3C3</color>
+    <color name="backgrounfTextView">#F5D6D5D5</color>
+</resources>

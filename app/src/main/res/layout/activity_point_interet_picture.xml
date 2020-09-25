@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PointInteretPictureActivity">
+    <Toolbar
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:onClick="menu"
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:src="@drawable/menu"
+                android:layout_alignParentLeft="true"
+                />
+            <ImageView
+                android:onClick="back"
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_back"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+    </Toolbar>
+
+    <ImageView
+        android:id="@+id/pointInteretPicture"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/topToolbar"
+        android:layout_above="@id/takePicture"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+
+    <Button
+        android:id="@+id/takePicture"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:onClick="takePicture"
+        android:layout_above="@id/choosePicture"
+        android:layout_centerHorizontal="true"
+        android:text="Take Picture"
+        android:background="@color/principale"/>
+
+    <Button
+        android:id="@+id/choosePicture"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:onClick="choosePicture"
+
+        android:layout_above="@id/savePicture"
+        android:layout_centerHorizontal="true"
+        android:text="Choose Picture"
+        android:background="@color/principale"/>
+
+
+    <Button
+        android:id="@+id/savePicture"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@color/principale"
+        android:onClick="savePicture"
+        android:layout_above="@id/bottomToolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="SAVE"/>
+
+
+
+
+    <Toolbar
+        android:id="@+id/bottomToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/map"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="goToMain"
+                android:src="@drawable/map"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/profile"
+                android:onClick="goToProfile"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/search"
+                android:layout_margin="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:onClick="goToSearch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/search"
+                />
+        </RelativeLayout>
+    </Toolbar>
+
+</RelativeLayout>

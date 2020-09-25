@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  -->
+    <dimen name="text_size">35sp</dimen>
+   <dimen name="ToolBarHeight">60dp</dimen>
+    <!-- AfterCenterToolBar -->
+    <dimen name="aftercenterToolbarWidth">300dp</dimen>
+    <dimen name="aftercenterToolbarHeight">40dp</dimen>
+    <dimen name="aftercenterToolbarMargin">25dp</dimen>
+    <dimen name="aftercenterToolbarTextSize">30sp</dimen>
+    <!-- Marge du titre Points d'intérêts -->
+    <dimen name="mesPointMarginStart">30dp</dimen>
+
+    <!-- dimension d'une icone -->
+    <dimen name="iconeHeight_Width">50dp</dimen>
+    <!-- la marge de 5dpi -->
+    <dimen name="margin5">5dp</dimen>
+    <!-- la taille du text de description -->
+    <dimen name="DescriptioTextSize">20sp</dimen>
+    <!-- l'espace entre les images de la gallerie  -->
+    <dimen name="gridSpacing">5dp</dimen>
+
+    <dimen name="couvertureheight">180dp</dimen>
+
+    <dimen name="profilMarginStart">140dp</dimen>
+
+    <dimen name="cordonneeTextSize">32sp</dimen>
+
+    <dimen name="photo_Profil_Dimension">130dp</dimen>
+    <dimen name="photo_Profil_Margin">220dp</dimen>
+
+    <!--After Center ToolBar-->
+    <dimen name="afterCenterToolBar_width">300dp</dimen>
+    <dimen name="afterCenterToolBar_height">40dp</dimen>
+<dimen name="afterCenterToolBar_textSize">25sp</dimen>
+ <dimen name="histo_MarginStart">30dp</dimen>
+
+
+</resources>

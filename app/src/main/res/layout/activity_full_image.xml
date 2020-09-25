@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FullImageActivity">
+<ImageView
+    android:id="@+id/myFullImage"
+    android:layout_width="400dp"
+    android:layout_height="300dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myFullImage"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:id="@+id/previousImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/back"
+            android:onClick="goToPrevious"/>
+
+        <ImageView
+            android:id="@+id/nextImage"
+            android:layout_width="100dp"
+            android:onClick="goToNext"
+            android:layout_height="100dp"
+            android:src="@drawable/next"
+            />
+
+
+
+    </LinearLayout>
+</RelativeLayout>

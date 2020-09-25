@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Randonner</string>
+    <string name="accesToken">pk.eyJ1IjoiaW5hbWhhZGFpciIsImEiOiJjanMxMzNrM3Axazl4NDNtMWt3cnlyMGtmIn0.KtCpe48N-HJ3bfhXp-Ywrw</string>
+    <string name="user_location_permission_explanation">to detect you position we must have permission</string>
+    <string name="user_location_permission_not_granted">no permission</string>
+    <string name="streets">Streets</string>
+    <string name="satellite">Satellite</string>
+    <string name="outdoors">Outdoors</string>
+    <string name="darkLayer">Dark</string>
+    <string name="lightLayer">Light</string>
+    <string name="fontSize"></string>
+    <string name="forget"><u>Mot de passe oublié ?</u></string>
+    <string name="signUp"><u>S\'inscrire</u></string>
+    <string name="start_navigating">Start Navigating</string>
+    <string name="profil">Profil</string>
+    <string name="historique">Historique</string>
+    <string name="parcours">Parcours</string>
+    <string name="mesCordonnees">Mes cordonnées</string>
+    <string name="mesPoints">Mes points</string>
+    <string name="detaillePoint">Point X</string>
+    <string name="error_unknown_error">error_unknown_error</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="defaultTitel">Name Marker</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="basic_offline_deleted_toast">basic_offline_deleted_toast</string>
+    <string name="simple_offline_end_progress_success">simple_offline_end_progress_success</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="37.7897"
+        mapbox:mapbox_cameraTargetLng="-119.5073"
+        mapbox:mapbox_cameraZoom="11" />
+
+    <Button
+        android:layout_margin="20dp"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download"
+        android:onClick="download"/>
+
+    <ProgressBar
+
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/customprogressbar"
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+            android:layout_above="@id/button"
+        android:layout_margin="5dp"
+        android:visibility="invisible"
+
+        />
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:background="@color/mapbox_blue"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Region Name"
+            android:layout_gravity="center_horizontal"/>
+        <EditText
+            android:id="@+id/regionName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="text"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:onClick="downloadOffLineRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:layout_gravity="center_horizontal"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

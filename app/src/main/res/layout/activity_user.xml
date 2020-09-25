@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+    <Toolbar
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:onClick="menu"
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:src="@drawable/menu"
+                android:layout_alignParentLeft="true"
+                />
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:onClick="edit"
+
+                android:src="@drawable/ic_edit"
+                android:layout_centerHorizontal="true"
+                />
+            <ImageView
+                android:id="@+id/save"
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_save"
+                android:onClick="save"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logout"
+                android:onClick="logOut"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+
+    </Toolbar>
+    <RelativeLayout
+        android:layout_below="@id/topToolbar"
+        android:id="@+id/couverture"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/profilebackground"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePicture"
+            android:onClick="profilePictureChoosen"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/user"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+    <Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/menuToolbar"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/couverture"
+        android:background="#0ac2a3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="16dp"
+                android:onClick="homeClick"
+                android:textColor="#FFF"
+                android:gravity="center"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parcours"
+                android:gravity="center"
+                android:onClick="parcoursClick"
+                android:textSize="16dp"
+                android:textColor="#FFF"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Points d'interet"
+                android:onClick="pointInteretClick"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </Toolbar>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menuToolbar"
+        android:layout_margin="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="First Name :"
+                android:textColor="@color/dark"
+                android:layout_weight="0"></TextView>
+            <EditText
+                android:layout_weight="2"
+                android:hint="First Name"
+                android:id="@+id/firstName"
+                android:inputType="text"
+                ></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Last Name :"
+                android:textColor="@color/dark"
+                android:layout_weight="0"></TextView>
+            <EditText
+                android:layout_weight="2"
+                android:hint="Last Name"
+
+                android:id="@+id/lastName"
+                android:inputType="text"
+                ></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Email :"
+                android:textColor="@color/dark"
+                android:layout_weight="0"></TextView>
+            <EditText
+                android:layout_weight="2"
+                android:hint="Email"
+                android:id="@+id/email"
+                android:inputType="textEmailAddress"
+                ></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Phone Number :"
+                android:textColor="@color/dark"
+                android:layout_weight="0"></TextView>
+            <EditText
+                android:layout_weight="2"
+                android:hint="Phone Number"
+                android:id="@+id/phoneNumber"
+                android:inputType="phone"
+                ></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Birth date :"
+                android:textColor="@color/dark"
+                android:layout_weight="0"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:id="@+id/birthDay"
+                android:text="année-mois-jour"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                ></TextView>
+
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/passwordRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Password :"
+                android:textColor="@color/dark"
+                android:layout_weight="0"></TextView>
+            <EditText
+                android:layout_weight="2"
+                android:hint="Password"
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                ></EditText>
+        </TableRow>
+
+
+    </TableLayout>
+
+
+
+
+    <Toolbar
+        android:id="@+id/bottomToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/map"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="goToMain"
+                android:src="@drawable/map"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/profile"
+                android:onClick="goToProfile"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/search"
+                android:layout_margin="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:onClick="goToSearch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/search"
+                />
+        </RelativeLayout>
+
+    </Toolbar>
+
+</RelativeLayout>

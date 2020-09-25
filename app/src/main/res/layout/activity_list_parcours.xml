@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListParcoursActivity">
+    <Toolbar
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:onClick="menu"
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:src="@drawable/menu"
+                android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parcours"
+                android:textColor="@color/textWhite"
+                android:textSize="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logout"
+                android:onClick="logOut"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+
+    </Toolbar>
+
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/listParcours"
+    android:layout_above="@id/bottomToolbar"
+    android:layout_below="@id/topToolbar">
+</ListView>
+
+
+
+
+    <Toolbar
+        android:id="@+id/bottomToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        style="@style/BarColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/map"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="goToMain"
+                android:src="@drawable/map"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/profile"
+                android:onClick="goToProfile"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/search"
+                android:layout_margin="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:onClick="goToSearch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/search"
+                />
+        </RelativeLayout>
+
+    </Toolbar>
+
+</RelativeLayout>

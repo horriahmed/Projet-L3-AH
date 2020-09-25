@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">offlinemap</string>
+    <string name="basic_offline_deleted_toast">basic_offline_deleted_toast</string>
+    <string name="simple_offline_end_progress_success">simple_offline_end_progress_success</string>
+</resources>
